@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/contents.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
 </head>
 <body>
     <!--2022.07.18-->
@@ -46,8 +48,8 @@
         <div id="top_visual"></div>
         <!--//top visual-->
 
-        <!-- 첫 번째 page_panel1-->
-        <div id="panel1_manybook" class="main_panel manybook-section">
+        <!-- 첫 번째 page_panel1 라이브러리 슬라이드-->
+        <div id="panel1_manybook" class="main_panel manybook-page">
             <div class="panel1_wrap">
                 <div class="text_wrap">
                     <h2>
@@ -76,11 +78,202 @@
         </div>
         <!--//page_panel1-->
 
-         <!--두 번재 page_panel2-->
-         <div id="page_panel2"  class="main_panel">
-            <div class="contains"></div>
+         <!--두 번재 page_panel2 무제한-->
+         <div id="panel2_unlimited"  class="main_panel unlimited-page">
+            <div class="contains panel2_wrap">
+                <div class="text-wrap">
+                    <h2>
+                        싹 다 무제한
+                        <br>
+                        9,900원
+                    </h2>
+                    <p> 
+                        10년치 베스트셀러 
+                        <br>
+                        신간 오디오북 장르 소설까지
+                    </p>
+                </div>
+                <div class="unlimited_wrap">
+                    <div class="booklist">
+                        <strong>지금 서점 베스트 셀러</strong>
+                        <div class="book-shelf">
+                            <div class="slide-container">
+                                <ul class="slide-wrapper">
+                                    <li class="slide-item list1"></li>
+                                    <li class="slide-item list1"></li>
+                                    <li class="slide-item list1"></li>
+                                    <li class="slide-item list1"></li>
+                                    <li class="slide-item list1"></li>
+                                    <li class="slide-item list1"></li>
+                                    <li class="slide-item list1"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booklist">
+                        <div class="booklist">
+                            <strong>한 달 이내 출간된 책</strong>
+                            <div class="book-shelf">
+                                <div class="slide-container">
+                                    <ul class="slide-wrapper">
+                                        <li class="slide-item list2"></li>
+                                        <li class="slide-item list2"></li>
+                                        <li class="slide-item list2"></li>
+                                        <li class="slide-item list2"></li>
+                                        <li class="slide-item list2"></li>
+                                        <li class="slide-item list2"></li>
+                                        <li class="slide-item list2"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booklist">
+                        <div class="booklist">
+                            <strong>판타지 BEST</strong>
+                            <div class="book-shelf">
+                                <div class="slide-container">
+                                    <ul class="slide-wrapper">
+                                        <li class="slide-item list3"></li>
+                                        <li class="slide-item list3"></li>
+                                        <li class="slide-item list3"></li>
+                                        <li class="slide-item list3"></li>
+                                        <li class="slide-item list3"></li>
+                                        <li class="slide-item list3"></li>
+                                        <li class="slide-item list3"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booklist">
+                        <div class="booklist">
+                            <strong>김영하 작가 시리즈</strong>
+                            <div class="book-shelf">
+                                <div class="slide-container">
+                                    <ul class="slide-wrapper">
+                                        <li class="slide-item list4"></li>
+                                        <li class="slide-item list4"></li>
+                                        <li class="slide-item list4"></li>
+                                        <li class="slide-item list4"></li>
+                                        <li class="slide-item list4"></li>
+                                        <li class="slide-item list4"></li>
+                                        <li class="slide-item list4"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
          </div>
          <!--//page_panel2-->
+
+         <script>
+            $ .ajax({
+                method:"GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data:{query:"베스트셀러",size:50},
+                headers:{Authorization: "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
+
+            })
+            .done(function(msg){
+                //for 문 (7개)
+                var list=document.getElementsByClassName('list1');
+
+                for(var i=0; i<list.length; i++){
+                    
+                    $(".list1").eq(i).append('<a href="#">'+"<img src='"+msg.documents[i].thumbnail+"'/>"+"</a>");
+
+                    var title = msg.documents[i].title;
+                    var title_c= title.substring(i,10);
+
+                    $(".list1").eq(i).append("<h3>"+'<a href="sub_book13.html">'+msg.documents[i].title_c+"</a>"+"</h3>");
+
+                    $(".list1").eq(i).append("<h6>"+msg.documents[i].authors+"</h6>");
+
+                    
+                    var str=msg.documents[i].contents;
+                
+                    $(".list1").eq(i).append('<a href="#" class="btn">'+"click"+"</a>");  
+                }
+            })
+         </script>
+
+    <script>
+    $ .ajax({
+        method:"GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data:{query:"NEW",size:50},
+        headers:{Authorization: "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
+
+    })
+    .done(function(msg){
+        //for 문 (7개)
+        var list=document.getElementsByClassName('list2');
+
+        for(var i=0; i<list.length; i++){
+            
+            $(".list2").eq(i).append('<a href="#">'+"<img src='"+msg.documents[i].thumbnail+"'/>"+"</a>");
+            $(".list2").eq(i).append("<h3>"+'<a href="sub_book13.html">'+msg.documents[i].title+"</a>"+"</h3>");
+            $(".list2").eq(i).append("<h6>"+msg.documents[i].authors+"</h6>");
+
+            var str=msg.documents[i].contents;
+        
+            $(".list2").eq(i).append('<a href="#" class="btn">'+"click"+"</a>");  
+        }
+    })
+    </script>
+
+    <script>/* book list 3번째 "판타지BEST"*/
+        $ .ajax({
+            method:"GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data:{query:"해리포터",size:50},
+            headers:{Authorization: "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
+
+        })
+        .done(function(msg){
+            //for 문 (7개)
+            var list=document.getElementsByClassName('list3');
+
+            for(var i=0; i<list.length; i++){
+                
+                $(".list3").eq(i).append('<a href="#">'+"<img src='"+msg.documents[i].thumbnail+"'/>"+"</a>");
+                $(".list3").eq(i).append("<h3>"+'<a href="sub_book13.html">'+msg.documents[i].title+"</a>"+"</h3>");
+                $(".list3").eq(i).append("<h6>"+msg.documents[i].authors+"</h6>");
+
+                var str=msg.documents[i].contents;
+            
+                $(".list3").eq(i).append('<a href="#" class="btn">'+"click"+"</a>");  
+            }
+        })
+     </script>
+
+<script>/* book list 4번째 "김영하 작가 시리즈 "*/
+    $ .ajax({
+        method:"GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data:{query:"김영하",size:50},
+        headers:{Authorization: "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
+
+    })
+    .done(function(msg){
+        //for 문 (7개)
+        var list=document.getElementsByClassName('list4');
+
+        for(var i=0; i<list.length; i++){
+            
+            $(".list4").eq(i).append('<a href="#">'+"<img src='"+msg.documents[i].thumbnail+"'/>"+"</a>");
+            $(".list4").eq(i).append("<h3>"+'<a href="sub_book13.html">'+msg.documents[i].title+"</a>"+"</h3>");
+            $(".list4").eq(i).append("<h6>"+msg.documents[i].authors+"</h6>");
+
+            var str=msg.documents[i].contents;
+        
+            $(".list4").eq(i).append('<a href="#" class="btn">'+"click"+"</a>");  
+        }
+    })
+ </script>
 
           <!-- 세 번째 page_panel3-->
         <div id="page_panel3"  class="main_panel">

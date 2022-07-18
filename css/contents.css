@@ -10,7 +10,6 @@
 /*contetnts*/
 .main_panel {
   position: relative;
-  padding: 80px;
   width: 100%;
 }
 
@@ -50,9 +49,53 @@
   background: url(/images/main/slide1.png) repeat-x;
 }
 
-#page_panel2 {
+#panel2_unlimited {
   background-color: rgb(255, 178, 34);
-  height: 800px;
+  height: auto;
+}
+#panel2_unlimited .panel2_wrap {
+  background-color: white;
+}
+#panel2_unlimited .panel2_wrap .text-wrap {
+  margin-bottom: 60px;
+}
+#panel2_unlimited .panel2_wrap .text-wrap h2 {
+  text-align: center;
+}
+#panel2_unlimited .panel2_wrap .text-wrap p {
+  text-align: center;
+}
+#panel2_unlimited .panel2_wrap .unlimited_wrap {
+  margin-top: 80px;
+}
+#panel2_unlimited .panel2_wrap .unlimited_wrap .booklist {
+  margin: 32px auto;
+}
+#panel2_unlimited .panel2_wrap .unlimited_wrap .booklist strong {
+  display: block;
+  font-weight: 700px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #242424;
+  margin-bottom: 16px;
+}
+#panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf {
+  border: 2px solid firebrick;
+  margin: 0 auto;
+  height: auto;
+}
+#panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf .slide-container {
+  margin: 0;
+}
+#panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf .slide-container .slide-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+#panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf .slide-container .slide-wrapper .slide-item {
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
 }
 
 #page_panel3 {

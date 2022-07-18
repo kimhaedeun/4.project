@@ -12,7 +12,6 @@
 
 .main_panel{
     position: relative;
-    padding: 80px;
     width: 100%; 
 }
 
@@ -63,10 +62,68 @@
 
 }
 
-#page_panel2{
+#panel2_unlimited{
     background-color: rgb(255, 178, 34);
-    height:800px ;
+    height:auto;
+
+    .panel2_wrap{
+        background-color: white;
+
+        .text-wrap{
+            margin-bottom: 60px;
+
+            h2{
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+            }
+        }
+
+        .unlimited_wrap{
+            margin-top: 80px;
+
+            .booklist{
+                margin: 32px auto;
+                
+                strong{
+                    display: block;
+                    font-weight: 700px;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #242424;
+                    margin-bottom: 16px;
+                }
+
+                .book-shelf{
+                    border: 2px solid firebrick;
+                    margin: 0 auto;
+                    height: auto;
+                    
+                    .slide-container{
+                        margin: 0;
+                        
+                        .slide-wrapper{
+                            display: flex;
+                            justify-content:space-between;
+                            flex-wrap: nowrap;
+                        
+
+                            .slide-item{
+                                border: 1px solid black;
+                                width: 300px;
+                                height: 300px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 #page_panel3{
     background-color: rgb(253, 221, 42);
     height:800px ;
