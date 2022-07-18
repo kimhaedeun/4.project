@@ -16,9 +16,51 @@
     width: 100%; 
 }
 
-#page_panel1{
+#panel1_manybook{
+    max-width: 100%;
+    border: 1px solid black;
     background-color: rgb(255, 116, 116);
-    height:800px ;
+    padding: 80px 0;
+    height:auto;
+
+    .panel1_wrap{
+        margin: 0 auto;
+        overflow: hidden;
+
+        .text_wrap{
+            margin-bottom: 60px;
+        }
+    
+        h2{
+            text-align: center;
+        }
+        
+        p{
+            text-align: center;
+        }
+    
+        .bookslide_wrap{
+            margin-top: 80px;
+    
+            .slide01{
+                border: 1px solid wheat;
+                 background: url(/images/main/slide1.png) repeat-x;
+             }
+             .slide02{
+                 border: 1px solid wheat;
+                  background: url(/images/main/slide1.png) repeat-x;
+              }
+              .slide03{
+                 border: 1px solid wheat;
+                  background: url(/images/main/slide1.png) repeat-x;
+              }
+        }
+    
+    }
+
+    
+   
+
 }
 
 #page_panel2{
