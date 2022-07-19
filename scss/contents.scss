@@ -300,8 +300,8 @@
 
 #panel4_reading{
     position: relative;
-    background-color: rgb(142, 255, 170);
-    height:600px ;
+    background-color: rgb(230, 230, 230);
+    height:auto;
 
     .text-wrap{
         margin-bottom: 60px;
@@ -329,7 +329,7 @@
    }
    .reading-wrap{
     
-        border: 1px solid gold;
+        // border: 1px solid gold;
         padding: 40px 24px 0;
         
 
@@ -348,6 +348,10 @@
                     border: 20px solid salmon;
                     position: absolute;
                     max-width: 172px;
+
+                    img{
+                        width:172px;
+                    }
                 }
                 .card02{
                     border: 20px solid rgb(190, 166, 163);
@@ -355,13 +359,22 @@
                     top: 12%;
                     position: absolute;
                     max-width: 172px;
+
+                    img{
+                        width:172px;
+                    }
                 }
                 .card03{
                     border: 20px solid gold;
                     position: absolute;
                     max-width: 172px;
+                    max-height: 172px;
                     top: 12%;
                     right: 0;
+
+                    img{
+                        width:172px;
+                    }
                 }
                 .card04{
                     border: 20px solid khaki;
@@ -369,6 +382,41 @@
                     position: absolute;
                     top: 50%;
                     right: -10%;
+
+                    img{
+                        width:172px;
+                    }
+                }
+            }
+
+            .background-wrap{
+                position: relative;
+
+                .mock{
+                    position: relative;
+                    left: 53%;
+                    display: inline-block;
+                    transform: translate(-50%);
+
+                    img{
+                        width: 410px;
+                        height: auto;
+                    }
+
+                }
+
+                .toolip{
+                    position: absolute;
+                    border-radius: 8px;
+                    top: 49%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    min-height: 297px;
+
+                    img{
+                        width: 417px;
+                        height: auto;
+                    }
                 }
             }
         }
@@ -377,9 +425,267 @@
    }
 
 }
-#page_panel5{
-    background-color: rgb(128, 255, 234);
-    height:800px ;
+#panel5_price{
+    background-color: #ffeb60;
+    height:800px;
+
+    .text-wrap{
+        margin-bottom: 60px;
+
+       h2{
+           text-align: center;
+           font-size: 50px;
+           line-height: 130%;
+           letter-spacing: -0.01em;;
+           color: #242424;
+           margin-bottom: 24px;
+           font-family: 'Cafe24Ssurround';
+           
+
+       }
+       
+       p{
+           font-size: 22px;
+           line-height: 160%;
+           letter-spacing: -.6px;
+           text-align: center;
+           color: #555;
+           font-family: 'Cafe24Ssurround';
+           
+       }
+   }
+    .price-wrap{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        margin: 0 auto;
+        font-family: 'Pretendard';
+
+        .price-list{
+            display: flex;
+            flex-direction: row;
+
+            li{
+                margin: 0 20px;
+            }
+
+            li:first-child{
+               
+                width: 300px;
+                height: 300px;
+                background-color: #fff;
+                box-shadow: 10px 10px 40px rgb(0 0 0 /10%);
+                border-radius: 16px;
+                padding: 32px;
+                
+
+                strong{
+                    font-weight: bold;
+                    font-size: 20px;
+                    
+                }
+
+                .month{
+                    display: flex;
+                    align-items: baseline;
+                    margin-top: 25px;
+                    color: #242424;
+
+                    span{
+                        font-size: 24px;
+                        margin-right: 6px;
+                        
+                    }
+
+                    p{
+                        font-size: 40px;
+                        line-height: 1%;
+                        margin-right: 2px;
+                        font-family: 'Cafe24Ssurround'
+                        
+                    }
+
+                    b{
+                        font-size: 16px;
+                        font-family: 'Pretendard';
+                    }
+                }
+                .year{
+                    margin: 16px 0 24px;
+
+                    .basic-price{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        p{
+                            font-size: 18px;
+                            color: #6f6f6f;
+                            margin: 0 8px 0 24px;
+                            text-decoration: line-through;
+                        }
+
+                        img{
+                            max-width: 57px;
+                        }
+                    }
+                    .discount-price{
+                        display: flex;
+                        align-items: baseline;
+
+                        span{
+                            font-size: 24px;
+                            margin-right: 6px;
+                        }
+                        p{
+                            font-size: 40px;
+                            line-height: 10%;
+                            margin-right: 2px;
+                            font-family: 'Cafe24Ssurround'
+                        }
+                        b{
+                            font-size: 16px;
+                            font-family: 'Pretendard';
+                        }
+                    }
+
+                }
+            }
+
+            li:last-child{
+                width: 300px;
+                height: 300px;
+                background-color: #fff;
+                box-shadow: 10px 10px 40px rgb(0 0 0 /10%);
+                border-radius: 16px;
+                padding: 32px;
+                
+
+                strong{
+                    font-weight: bold;
+                    font-size: 20px;
+                    
+                }
+
+                .month{
+                    display: flex;
+                    align-items: baseline;
+                    margin-top: 25px;
+                    color: #242424;
+
+                    span{
+                        font-size: 24px;
+                        margin-right: 6px;
+                        
+                    }
+
+                    p{
+                        font-size: 40px;
+                        line-height: 1%;
+                        margin-right: 2px;
+                        font-family: 'Cafe24Ssurround'
+                        
+                    }
+
+                    b{
+                        font-size: 16px;
+                        font-family: 'Pretendard';
+                    }
+                }
+                .year{
+                    margin: 16px 0 24px;
+
+                    .basic-price{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        p{
+                            font-size: 18px;
+                            color: #6f6f6f;
+                            margin: 0 8px 0 24px;
+                            text-decoration: line-through;
+                        }
+
+                        img{
+                            max-width: 57px;
+                        }
+                    }
+                    .discount-price{
+                        display: flex;
+                        align-items: baseline;
+
+                        span{
+                            font-size: 24px;
+                            margin-right: 6px;
+                        }
+                        p{
+                            font-size: 40px;
+                            line-height: 10%;
+                            margin-right: 2px;
+                            font-family: 'Cafe24Ssurround'
+                        }
+                        b{
+                            font-size: 16px;
+                            font-family: 'Pretendard';
+                        }
+                    }
+                }    
+            }
+
+            .sub-info{
+                font-size: 14px;
+                line-height: 20px;
+                color: #6f6f6f;
+            }     
+        }
+        .refund-list{
+
+            margin-left: 35px;
+
+            li:first-child{
+                padding-bottom: 16px;
+                border-bottom: 1px solid #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                img{
+                    max-width: 72px;
+                    margin-right: 24px;
+                    border-style: none;
+                    vertical-align: top;
+                    pointer-events:  none;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+            }
+            li:last-child{
+                padding-top: 16px;
+                border-bottom: 1px solid #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                img{
+                    max-width: 72px;
+                    margin-right: 24px;
+                    border-style: none;
+                    vertical-align: top;
+                    pointer-events:  none;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
 }
 #page_panel6{
     background-color: rgb(78, 169, 255);
