@@ -1,11 +1,25 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// * { 
+// font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+// }
+
 /* reset */
 
 
 html,body{margin: 0px; padding: 0px; width: 100%; overflow-x: hidden; letter-spacing: -1px;}
 img,a{border: 0px;}
 ul,ol,li{list-style: none; margin: 0; padding: 0;}
-a{text-decoration: none;}
+a{text-decoration: none;  color: rgb(43, 43, 43);}
 button{cursor: pointer;}
 
+// *{ font-family: 'Cafe24Ssurround';}
