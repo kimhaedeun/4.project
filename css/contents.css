@@ -4,7 +4,41 @@
   width: 100%;
   display: block;
   position: relative;
-  height: 700px;
+  height: auto;
+}
+
+#top_visual .visual_box {
+  border: 10px solid white;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+#top_visual .visual_box .bg {
+  width: 100%;
+  height: 500px;
+  z-index: 11;
+}
+
+#top_visual .visual_box .bg img {
+  width: 100%;
+}
+
+#top_visual .visual_box .text-wrap {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+#top_visual .visual_box .text_left img {
+  width: 500px;
+  height: auto;
+  z-index: 15;
+  margin: 0 150px;
 }
 
 /*contetnts*/
@@ -16,61 +50,92 @@
 #panel1_manybook {
   max-width: 100%;
   border: 1px solid black;
-  background-color: rgb(255, 116, 116);
+  background-color: #ff7474;
   padding: 80px 0;
   height: auto;
 }
+
 #panel1_manybook .panel1_wrap {
   margin: 0 auto;
   overflow: hidden;
 }
+
 #panel1_manybook .panel1_wrap .text_wrap {
   margin-bottom: 60px;
 }
+
 #panel1_manybook .panel1_wrap h2 {
   text-align: center;
 }
+
 #panel1_manybook .panel1_wrap p {
   text-align: center;
 }
+
 #panel1_manybook .panel1_wrap .bookslide_wrap {
   margin-top: 80px;
 }
+
 #panel1_manybook .panel1_wrap .bookslide_wrap .slide01 {
   border: 1px solid wheat;
   background: url(/images/main/slide1.png) repeat-x;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: slideRight-data-v-003e81a0;
+          animation-name: slideRight-data-v-003e81a0;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: cubic-bezier(0.73, 0.82, 1, 2.88);
+          animation-timing-function: cubic-bezier(0.73, 0.82, 1, 2.88);
 }
+
 #panel1_manybook .panel1_wrap .bookslide_wrap .slide02 {
   border: 1px solid wheat;
   background: url(/images/main/slide1.png) repeat-x;
 }
+
 #panel1_manybook .panel1_wrap .bookslide_wrap .slide03 {
   border: 1px solid wheat;
   background: url(/images/main/slide1.png) repeat-x;
 }
 
 #panel2_unlimited {
-  background-color: rgb(255, 178, 34);
+  background-color: #ffb222;
   height: auto;
 }
+
 #panel2_unlimited .panel2_wrap {
   background-color: white;
 }
+
 #panel2_unlimited .panel2_wrap .text-wrap {
   margin-bottom: 60px;
 }
+
 #panel2_unlimited .panel2_wrap .text-wrap h2 {
   text-align: center;
 }
+
 #panel2_unlimited .panel2_wrap .text-wrap p {
   text-align: center;
 }
+
 #panel2_unlimited .panel2_wrap .unlimited_wrap {
   margin-top: 80px;
 }
+
 #panel2_unlimited .panel2_wrap .unlimited_wrap .booklist {
   margin: 32px auto;
 }
+
 #panel2_unlimited .panel2_wrap .unlimited_wrap .booklist strong {
   display: block;
   font-weight: 700px;
@@ -79,19 +144,28 @@
   color: #242424;
   margin-bottom: 16px;
 }
+
 #panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf {
   border: 2px solid firebrick;
   margin: 0 auto;
   height: auto;
 }
+
 #panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf .slide-container {
   margin: 0;
 }
+
 #panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf .slide-container .slide-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
+
 #panel2_unlimited .panel2_wrap .unlimited_wrap .booklist .book-shelf .slide-container .slide-wrapper .slide-item {
   border: 1px solid black;
   width: 300px;
@@ -99,31 +173,31 @@
 }
 
 #page_panel3 {
-  background-color: rgb(253, 221, 42);
+  background-color: #fddd2a;
   height: 800px;
 }
 
 #page_panel4 {
-  background-color: rgb(142, 255, 170);
+  background-color: #8effaa;
   height: 800px;
 }
 
 #page_panel5 {
-  background-color: rgb(128, 255, 234);
+  background-color: #80ffea;
   height: 800px;
 }
 
 #page_panel6 {
-  background-color: rgb(78, 169, 255);
+  background-color: #4ea9ff;
   height: 800px;
 }
 
 #page_panel7 {
-  background-color: rgb(40, 44, 253);
+  background-color: #282cfd;
   height: 800px;
 }
 
 #page_panel8 {
-  background-color: rgb(122, 61, 163);
+  background-color: #7a3da3;
   height: 800px;
 }

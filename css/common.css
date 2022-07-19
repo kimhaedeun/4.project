@@ -11,7 +11,7 @@
 /* 헤더 */
 header {
   position: fixed;
-  background-color: rgb(240, 187, 89);
+  background: rgba(255, 235, 96, 0.8);
   top: 0;
   left: 0;
   padding: 10px 0;
@@ -19,18 +19,26 @@ header {
   height: 60px;
   z-index: 200;
 }
+
 header h1 {
   top: 0;
   position: absolute;
-  background-color: rgb(194, 21, 21);
+  background-color: #c21515;
 }
+
 header h1 a {
   display: block;
 }
+
 header .gnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 header .gnb ul li {
   margin: 0 10px;
 }

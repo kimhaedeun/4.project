@@ -45,7 +45,24 @@
     <div id="main_contents">
         
         <!--top visual 메인 배경화면-->
-        <div id="top_visual"></div>
+        <div id="top_visual">
+            <div class="visual_wrap">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-color: rgba(255,235,96,.8);">
+                        <div class="visual_box">
+                            <div class="bg">
+                                <img src="images/main/mille_move3.gif" alt="">
+                            </div>    
+                            <div class="text_wrap">
+                                <div class="text_left">
+                                    <img src="images/main/bg_title.png" alt=""  >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--//top visual-->
 
         <!-- 첫 번째 page_panel1 라이브러리 슬라이드-->
@@ -229,7 +246,7 @@
         $ .ajax({
             method:"GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data:{query:"해리포터",size:50},
+            data:{query:"판타지",size:50},
             headers:{Authorization: "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
 
         })

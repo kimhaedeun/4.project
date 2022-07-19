@@ -3,8 +3,47 @@
 /*top_visual*/
 #top_visual{
     background-color: powderblue;
-    width: 100%; display: block; position: relative; 
-    height: 700px;
+    width: 100%; 
+    display: block; 
+    position: relative; 
+    height: auto;
+
+    .visual_box{
+        border: 10px solid white;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+
+        .bg {
+            width: 100%;
+            height: 500px;
+            z-index: 11;
+        }
+
+        .bg img{
+            width: 100%;
+        }
+
+        .text-wrap{
+           width: 100%;
+           height: auto;
+           position: absolute;
+           
+        }
+
+        .text_left img{
+            width:500px; 
+            height:auto;
+            z-index: 15;
+            margin: 0 150px;
+            
+        }
+
+    }
 }
 
 /*contetnts*/
@@ -44,6 +83,15 @@
             .slide01{
                 border: 1px solid wheat;
                  background: url(/images/main/slide1.png) repeat-x;
+                 animation-delay: 0s;
+                 animation-direction: normal;
+                 animation-duration: 100s;
+                 animation-fill-mode: none;
+                 animation-iteration-count: infinite;
+                 animation-name: slideRight-data-v-003e81a0;
+                 animation-play-state: running;
+                 animation-timing-function: cubic-bezier(0.73,0.82,1,2.88);
+                
              }
              .slide02{
                  border: 1px solid wheat;
