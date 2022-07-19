@@ -197,13 +197,185 @@
     }
 }
 
-#page_panel3{
-    background-color: rgb(253, 221, 42);
-    height:800px ;
+#panel3_categorize{
+    border: 1px solid blue;
+    background-color: #f7f7f7;
+    height:800px;
+
+    .panel3_wrap{
+        padding: 0;
+        
+
+        .text-wrap{
+            margin-bottom: 60px;
+
+           h2{
+               text-align: center;
+               font-size: 50px;
+               line-height: 130%;
+               letter-spacing: -0.01em;;
+               color: #242424;
+               margin-bottom: 24px;
+               font-family: 'Cafe24Ssurround';
+            }
+               
+   
+           
+           
+           p{
+               font-size: 22px;
+               line-height: 160%;
+               letter-spacing: -.6px;
+               text-align: center;
+               color: #555;
+               font-family: 'Cafe24Ssurround';
+            }
+        }
+
+        .categorize_wrap{
+            margin: 0 auto;
+            padding: 0 30px;
+
+            .filter{
+                overflow: hidden;
+
+                .slide-container{
+                    padding: 0 24px;
+                    
+                    .slide-wrapper{
+                        display: flex;
+                        flex-wrap: nowrap;
+                        padding-right: 24px;
+                        margin-bottom: 4px;
+
+                        .slide_item{
+                            margin: 0 3px;
+
+                            button{
+                                font-size: 15px;
+                                background-color: transparent;
+                                overflow: hidden;
+                                padding: 3px 16px;
+                                display: block;
+                                border: 1.2px solid #242424;
+                                border-radius: 100px;
+                                font-family: 'Pretendard';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .categorize-list{
+            border: 1px solid black;
+            padding-top: 16px;
+
+            .book-shelf{
+                margin: 0 auto;
+
+                .slide-container{
+                    margin-top: -16px;
+
+                    .slide-wrapper{
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: nowrap;
+
+                        .slide_item{
+                            border: 1px solid blue;
+                            width: 150px;
+                            height: 200px;
+                            
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+        
+
 }
-#page_panel4{
+
+#panel4_reading{
+    position: relative;
     background-color: rgb(142, 255, 170);
-    height:800px ;
+    height:600px ;
+
+    .text-wrap{
+        margin-bottom: 60px;
+
+       h2{
+           text-align: center;
+           font-size: 50px;
+           line-height: 130%;
+           letter-spacing: -0.01em;;
+           color: #242424;
+           margin-bottom: 24px;
+           font-family: 'Cafe24Ssurround';
+           
+
+       }
+       
+       p{
+           font-size: 22px;
+           line-height: 160%;
+           letter-spacing: -.6px;
+           text-align: center;
+           color: #555;
+           font-family: 'Cafe24Ssurround';
+       }
+   }
+   .reading-wrap{
+    
+        border: 1px solid gold;
+        padding: 40px 24px 0;
+        
+
+        .content-wrap{
+            border: 5px solid brown;
+           
+            max-width: 834px;
+            margin: 0 auto;
+            
+
+            .card-wrap{
+                
+
+                .card01{
+                    left: -10%; top: 50%; 
+                    border: 20px solid salmon;
+                    position: absolute;
+                    max-width: 172px;
+                }
+                .card02{
+                    border: 20px solid rgb(190, 166, 163);
+                    left: 0;
+                    top: 12%;
+                    position: absolute;
+                    max-width: 172px;
+                }
+                .card03{
+                    border: 20px solid gold;
+                    position: absolute;
+                    max-width: 172px;
+                    top: 12%;
+                    right: 0;
+                }
+                .card04{
+                    border: 20px solid khaki;
+                    max-width: 172px;
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                }
+            }
+        }
+
+
+   }
+
 }
 #page_panel5{
     background-color: rgb(128, 255, 234);
