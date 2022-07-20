@@ -50,6 +50,7 @@
 .main_panel{
     position: relative;
     width: 100%; 
+    
 }
 
 #panel1_manybook{
@@ -93,25 +94,56 @@
             margin-top: 80px;
     
             .slide01{
-                border: 1px solid wheat;
-                 background: url(/images/main/slide1.png) repeat-x;
-                 animation-delay: 0s;
-                 animation-direction: normal;
-                 animation-duration: 100s;
-                 animation-fill-mode: none;
-                 animation-iteration-count: infinite;
-                 animation-name: slideRight-data-v-003e81a0;
-                 animation-play-state: running;
-                 animation-timing-function: cubic-bezier(0.73,0.82,1,2.88);
+                height: 200px;
+                background-image: url(../images/main/slide1.png);
+                // border: 1px solid rgb(0, 0, 0);
+                background-size: 3000px;
+                animation-name: slide-left;
+                animation-duration: 80s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                
                 
              }
              .slide02{
-                 border: 1px solid wheat;
-                  background: url(/images/main/slide1.png) repeat-x;
+                height: 200px;
+                background-image: url(../images/main/slide2.png);
+                //  border: 1px solid wheat;
+                background-size: 3000px; 
+                animation-name: slide-right;
+                animation-duration: 100s;  
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
               }
               .slide03{
-                 border: 1px solid wheat;
-                  background: url(/images/main/slide1.png) repeat-x;
+                height: 200px;
+                background-image: url(../images/main/slide3.png);
+                // border: 1px solid rgb(78, 131, 18);
+                background-size: 3000px;
+                animation-name: slide-left;
+                animation-duration: 100s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+              }
+              
+              @keyframes slide-left{
+                from{
+                    background-position: 0px;
+                }
+                to{
+                    background-position: -3000px;
+                }
+              }
+
+              @keyframes slide-right {
+                from{
+                    background-position: -3000px;
+                    
+                }
+                to{
+                    background-position: 0;
+                }
+                
               }
         }
     

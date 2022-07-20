@@ -75,32 +75,75 @@
   margin-top: 80px;
 }
 #panel1_manybook .panel1_wrap .bookslide_wrap .slide01 {
-  border: 1px solid wheat;
-  background: url(/images/main/slide1.png) repeat-x;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
+  height: 200px;
+  background-image: url(../images/main/slide1.png);
+  background-size: 3000px;
+  -webkit-animation-name: slide-left;
+          animation-name: slide-left;
+  -webkit-animation-duration: 80s;
+          animation-duration: 80s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-name: slideRight-data-v-003e81a0;
-          animation-name: slideRight-data-v-003e81a0;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-animation-timing-function: cubic-bezier(0.73, 0.82, 1, 2.88);
-          animation-timing-function: cubic-bezier(0.73, 0.82, 1, 2.88);
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 #panel1_manybook .panel1_wrap .bookslide_wrap .slide02 {
-  border: 1px solid wheat;
-  background: url(/images/main/slide1.png) repeat-x;
+  height: 200px;
+  background-image: url(../images/main/slide2.png);
+  background-size: 3000px;
+  -webkit-animation-name: slide-right;
+          animation-name: slide-right;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 #panel1_manybook .panel1_wrap .bookslide_wrap .slide03 {
-  border: 1px solid wheat;
-  background: url(/images/main/slide1.png) repeat-x;
+  height: 200px;
+  background-image: url(../images/main/slide3.png);
+  background-size: 3000px;
+  -webkit-animation-name: slide-left;
+          animation-name: slide-left;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes slide-left {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -3000px;
+  }
+}
+@keyframes slide-left {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -3000px;
+  }
+}
+@-webkit-keyframes slide-right {
+  from {
+    background-position: -3000px;
+  }
+  to {
+    background-position: 0;
+  }
+}
+@keyframes slide-right {
+  from {
+    background-position: -3000px;
+  }
+  to {
+    background-position: 0;
+  }
 }
 
 #panel2_unlimited {

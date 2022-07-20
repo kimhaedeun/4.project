@@ -16,7 +16,7 @@ $ .ajax({
         $(".list1").eq(i).append('<a href="#">'+"<img src='"+msg.documents[i].thumbnail+"'/>"+"</a>");
 
         var title = msg.documents[i].title;
-        var title_c= title.substring(i,10);
+        
 
         $(".list1").eq(i).append("<h3>"+'<a href="sub_book13.html">'+msg.documents[i].title+"</a>"+"</h3>");
 
