@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+
+@mixin box{
+   
+    max-width: fit-content;
+    height: auto;
+    
+}
+
+.slide-wrapper .slide-wrapper1{
+    @include box;
+}
+
+@mixin imgbox{
+    
+    width: 200px;
+    height: auto; 
+
+    
+}
+
+.book-shelf> .slide-container> .slide-wrapper li{
+    @include imgbox;
+}
+
+@mixin texth2{
+    margin: 0;
+    padding: 60px 0px 0px;
+}
+
+.text-wrap h2{
+    @include texth2;
+}

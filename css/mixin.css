@@ -1,0 +1,16 @@
+.slide-wrapper .slide-wrapper1 {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: auto;
+}
+
+.book-shelf > .slide-container > .slide-wrapper li {
+  width: 200px;
+  height: auto;
+}
+
+.text-wrap h2 {
+  margin: 0;
+  padding: 60px 0px 0px;
+}
