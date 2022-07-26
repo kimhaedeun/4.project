@@ -70,9 +70,9 @@
 
         <!-- 첫 번째 page_panel1 라이브러리 슬라이드-->
         <div id="panel1_manybook" class="main_panel manybook-page">
-            <div class="panel1_wrap">
-                <div class="text_wrap">
-                    <h2 class="text1">
+            <div class="panel1_wrap text_animate">
+                <div class="text_wrap ">
+                    <h2 class="text1 ">
                         당신을 기다리는
                         <br>
                         11만권의 도서
@@ -825,4 +825,17 @@
         </button>
    
 </body>
+<script>
+    $(function(){
+        $('.text_wrap').css("transform","translateY(0px)").css("opacity","1");
+
+        $(window).scroll(function(){
+            var ws=$(this).scrollTop();
+
+            if(ws>700){
+                $('.text_wrap').css("transform","translateY(0px)").css("opacity","1");
+            }
+        });
+    });
+</script>
 </html>

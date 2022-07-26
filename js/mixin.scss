@@ -32,3 +32,14 @@
 .text-wrap h2{
     @include texth2;
 }
+
+@mixin text_wrap_slide{
+    transform: translateY(100px);
+    transition: all 2s ease;
+    opacity: 0;
+  
+}
+
+.text_wrap{
+    @include text_wrap_slide;
+}
