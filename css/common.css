@@ -62,7 +62,7 @@ header .login {
 /* 푸터 */
 footer {
   background: #eee;
-  padding: 100px 40px 50px;
+  padding: 40px 40px 50px;
   position: relative;
   font-family: "Pretendard";
 }
@@ -140,4 +140,27 @@ footer .copyright {
   font-size: 16px;
   min-height: 40px;
   max-width: 450px;
+}
+
+.btn_active {
+  font-size: 15px;
+  overflow: hidden;
+  display: block;
+  border: 1.2px solid #242424;
+  border-radius: 100px;
+  font-family: "Pretendard";
+  background-color: #333 !important;
+  color: #dfdfdf !important;
+  transition: all 0.5s ease;
+}
+
+.btn_phone {
+  font-size: 15px;
+  overflow: hidden;
+  border: 1.2px solid #242424;
+  border-radius: 100px;
+  font-family: "Pretendard";
+  background-color: #333 !important;
+  color: #dfdfdf !important;
+  transition: all 0.9s ease;
 }

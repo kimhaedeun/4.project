@@ -310,9 +310,11 @@
                         flex-wrap: nowrap;
                         padding-right: 0px;
                         margin-bottom: 4px;
+                        color: #242424;
 
                         .slide_item{
                             margin: 0 3px;
+                            
 
                             button{
                                 font-size: 15px;
@@ -323,12 +325,18 @@
                                 border: 1.2px solid #242424;
                                 border-radius: 100px;
                                 font-family: 'Pretendard';
+                                
                             }
                         }
                     }
                 }
             }
+
+            
         }
+
+    
+
 
         .categorize-list{
             padding-top: 16px;
@@ -787,7 +795,7 @@
 }
 #panel6_content{
     background-color:#f7f7f7;
-    height:auto ;
+    height:800px;
 
     .tap-wrap{
         background-color: #fff;
@@ -796,16 +804,30 @@
             margin: 0 auto;
             display: flex;
             flex-direction: row;
+            padding: 0 200px;
+
+            .t_3{
+
+                margin-left: 10px;}
 
             li{
                 cursor: pointer;
-                padding: 54px 16px 33px;
+                padding: 34px 16px 33px;
                 text-align: center;
                 position: relative;
                 flex: 1;
                 border: none;
+                text-align: center;
+                margin-top: 2%;
 
-        
+                img{
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    margin-top: -30px;
+                    margin-left: 20px;
+                }
+
             }
         }
     }
@@ -813,6 +835,8 @@
  
         
         .introduce{
+            width: 1000px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             padding:74px 90px;
@@ -862,10 +886,10 @@
 
             .phone-wrap{
                 box-sizing: border-box;
-                
+                                
                 .phone-shape{
+                    margin-top: -240px;
                     position: relative;
-                    overflow: hidden;
                     z-index: 10;
                     max-width: 330px;
                     filter: drop-shadow(
@@ -873,7 +897,7 @@
                     );
                     }
 
-                    img{
+                    img , video{
                         
                         position: relative;
                         z-index: 1000;
@@ -885,10 +909,13 @@
                         position:absolute;
                         width: 330px;
                         height: 670px;
-                        overflow:hidden;
                         margin-top:-680px;
                         z-index:1;
                         border-radius:80px;
+                        overflow: hidden;
+                      
+                      
+                        
                     }
             }
         }
@@ -970,9 +997,10 @@
 
         .qna-wrap{
             margin-top:60px;
+            padding: 50px;
 
             ul{
-               
+               margin: 0 auto;
                 max-width:920px;
 
                 li{
@@ -983,6 +1011,8 @@
                     border-radius:20px;
                     padding:22px 24px 24px;
                     overflow:hidden;
+                    transition: max-height .4s;
+                    max-height: auto;
 
                     .question{
                             margin-top:-5px;
@@ -993,6 +1023,7 @@
                                 letter-spacing:-.6px;
                                 font-weight:700;
                                 color:#242424;
+                                margin: 0;
                                 }
 
                             .down{
@@ -1003,11 +1034,14 @@
                                 right: 20px;
                                 top:30px;
                                 cursor:pointer;
+                                height: auto;
                                 }
                         }
                     .answer{
                         border-top:1px solid #242424;
                         margin-top:20px;
+                        display: none;
+                        
                         
                         p{
                             font-size:16px;
@@ -1023,7 +1057,5 @@
         
 }
 
-	/* 페이지 에니메이션 속도 0.3s == 0.3초(300ms) */
-	.page_animate{-webkit-transform:translateY(200px);-moz-transform:translateY(200px);-ms-transform:translateY(200px);transform:translateY(200px);-webkit-transition:transform 0.3s cubic-bezier(0,0,0.58,1);-moz-transition:transform 0.3s cubic-bezier(0,0,0.58,1);-ms-transition:transform 0.3s cubic-bezier(0,0,0.58,1);-o-transition:transform 0.3s cubic-bezier(0,0,0.58,1);/* transition:transform 0.3s cubic-bezier(0,0,0.58,1); */}
-	.page_animate.animate_delay{-webkit-transform:translateY(300px);-moz-transform:translateY(300px);-ms-transform:translateY(300px);transform:translateY(300px);-webkit-transition:transform 0.4s cubic-bezier(0,0,0.58,1);-moz-transition:transform 0.4s cubic-bezier(0,0,0.58,1);-ms-transition:transform 0.4s cubic-bezier(0,0,0.58,1);-o-transition:transform 0.4s cubic-bezier(0,0,0.58,1);transition:transform 0.4s cubic-bezier(0,0,0.58,1)}
+
 

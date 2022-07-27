@@ -214,7 +214,7 @@
                         <div class="slide-container">
                             <ul class="slide-wrapper">
                                 <li class="slide_item btn1">
-                                    <button class="active">주식</button>
+                                    <button >주식</button>
                                 </li>
                                 <li class="slide_item btn2">
                                     <button>영어</button>
@@ -434,8 +434,8 @@
             
             $(function(){
                 $('.btn1>button').click(function(){
-                    $("btn1").removeClass("active");
-                    $(this).addClass("active");
+                    $('.btn1>button').addClass("btn_active");
+                    $('.btn2>button , .btn3>button , .btn4>button , .btn5>button').removeClass("btn_active");
                     $('.slide-wrapper1').show();
                     $('.slide-wrapper2').hide();
                     $('.slide-wrapper3').hide();
@@ -444,8 +444,8 @@
 
                 });
                 $('.btn2>button').click(function(){
-                    $("btn2").removeClass("active");
-                    $(this).addClass("active");
+                    $('.btn2>button').addClass("btn_active");
+                    $('.btn1>button , .btn3>button , .btn4>button , .btn5>button').removeClass("btn_active");
                     $('.slide-wrapper2').show();
                     $('.slide-wrapper1').hide();
                     $('.slide-wrapper3').hide();
@@ -454,8 +454,8 @@
 
                 });
                 $('.btn3>button').click(function(){
-                    $("btn3").removeClass("active");
-                    $(this).addClass("active");
+                    $('.btn3>button').addClass("btn_active");
+                    $('.btn1>button , .btn2>button , .btn4>button , .btn5>button').removeClass("btn_active");
                     $('.slide-wrapper3').show();
                     $('.slide-wrapper1').hide();
                     $('.slide-wrapper2').hide();
@@ -464,8 +464,8 @@
 
                 });
                 $('.btn4>button').click(function(){
-                    $("btn1").removeClass("active");
-                    $(this).addClass("active");
+                    $('.btn4>button').addClass("btn_active");
+                    $('.btn1>button , .btn2>button , .btn3>button , .btn5>button').removeClass("btn_active");
                     $('.slide-wrapper4').show();
                     $('.slide-wrapper1').hide();
                     $('.slide-wrapper2').hide();
@@ -474,8 +474,8 @@
 
                 });
                 $('.btn5>button').click(function(){
-                    $("btn5").removeClass("active");
-                    $(this).addClass("active");
+                    $('.btn5>button').addClass("btn_active");
+                    $('.btn1>button , .btn2>button , .btn3>button , .btn4>button').removeClass("btn_active");
                     $('.slide-wrapper5').show();
                     $('.slide-wrapper1').hide();
                     $('.slide-wrapper2').hide();
@@ -532,6 +532,8 @@
             </div>
          </div>
          <!--//page_panel4-->
+
+        
 
           <!-- 다섯 번째 page_panel5-->
         <div id="panel5_price"  class="main_panel price_page">
@@ -626,19 +628,18 @@
 
          <!-- 여섯 번째 page_panel6-->
          <div id="panel6_content"  class="main_panel content_page">
-            <div class="contains">
                 <div class="tap-wrap">
                     <ul>
                         <li class="audio_book active">
-                            <img src="images/main/tap-audio.png" alt="audio">
+                            <img src="images/main/tap-audio.png" alt="audio" class="t_1">
                            오디오북
                         </li>
                         <li class="viewer active">
-                            <img src="images/main/tap-viewer.png" alt="viewer">
+                            <img src="images/main/tap-viewer.png" alt="viewer" class="t_2">
                             밀리 뷰어
                         </li>
                         <li class="today active">
-                            <img src="images/main/tap-today.png" alt="today">
+                            <img src="images/main/tap-today.png" alt="today" class="t_3">
                             투데이
                         </li>
                     </ul>
@@ -672,27 +673,56 @@
                                 </div>
                                 <div class="phone-contents">
                                     <div class="phone_slide">
-                                        <div class="p_slide1">
+                                        
                                             <img src="images/main/ph_slide1.png" alt="">
-                                        </div>
-                                        <div class="p_slide2">
-                                            <img src="images/main/ph_slide1.png" alt="">
-                                        </div>
-                                        <div class="p_slide3">
+
+                                           
+                                            <video src="images/main/viewer_system2.mp4" class="v_img" style="width:330px"; autoplay="autoplay" preload="auto" muted="muted" loop="loop" ></video>
+                                        
+                                        
                                             <img src="images/main/ph_slide3.png" alt="">
-                                        </div>
-                                        <div class="p_slide4">
+
+                                       
+                                       
                                             <img src="images/main/ph_slide4.png" alt="">
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
                     </div>    
-                </div>
-            </div>
-        
+                </div>     
          </div>
          <!--//page_panel6-->
+
+         <script>
+            $(function(){
+                $(".tap_btn > button:nth-of-type(1)").click(function(){
+                    $(".phone-contents>.phone_slide>img").animate({top:0},"fast");
+                    $(".p2").html("<b>하루의 시작과 마무리를 오디오북과 함께</b>" + "<br/>" + "지하철에서도, 잠들기 전에도 독서하세요");
+                    $(".tap_btn>button").removeClass("btn_phone");
+                    $(".t_btn1").addClass("btn_phone");
+                });
+                $(".tap_btn > button:nth-of-type(2)").click(function(){
+                    $(".phone-contents>.phone_slide>.v_img").animate({top:-740},"fast");
+                    $(".p2").html("귀로 듣다가 눈으로도 같이 보면" + "<br/>" + "더 내용이 잘 이해돼요");
+                    $(".tap_btn>button").removeClass("btn_phone");
+                    $(".t_btn2").addClass("btn_phone");
+                });
+                $(".tap_btn > button:nth-of-type(3)").click(function(){
+                    $(".phone-contents>.phone_slide>img").animate({top:-1480},"fast");
+                    $(".p2").html("30분만에 책 요약" + "<br/>" + "핵심만 쏙 골라 읽어주는 오디오북");
+                    $(".tap_btn>button").removeClass("btn_phone");
+                    $(".t_btn3").addClass("btn_phone");
+                });
+                $(".tap_btn > button:nth-of-type(4)").click(function(){
+                    $(".phone-contents>.phone_slide>img").animate({top:-2160},"fast");
+                    $(".p2").html("이제훈부터 옥주현까지" + "<br/>" + "셀럽이 읽어주는 오디오북");
+                    $(".tap_btn>button").removeClass("btn_phone");
+                    $(".t_btn4").addClass("btn_phone");
+                });
+
+            });
+         </script>
 
           <!-- 일곱 번째 page_panel7-->
         <div id="panel7_review"  class="main_panel">
@@ -728,7 +758,7 @@
                         <li>
                             <div class="question">
                                 <p>안쓰면 정말 환불해 주나요?</p>
-                                <img src="images/main/down.png" alt="" class="down">
+                                <img src="images/main/down.png" alt="" class="down qu1">
                             </div>
                             <div class="answer">
                                 <p>물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다면 전액 환불해 드리고 있어요. <br>
@@ -739,7 +769,7 @@
                         <li>
                             <div class="question">
                                 <p>구독 중 해지 할 수 있나요? 수수료는 없나요?</p>
-                                <img src="images/main/down.png" alt="" class="down">
+                                <img src="images/main/down.png" alt="" class="down qu2">
                             </div>
                             <div class="answer">
                                 <p>다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다. <br>
@@ -749,7 +779,7 @@
                         <li>
                             <div class="question">
                                 <p>무료 혜택은 누구나 받을 수 있나요?</p>
-                                <img src="images/main/down.png" alt="" class="down">
+                                <img src="images/main/down.png" alt="" class="down qu3">
                             </div>
                             <div class="answer">
                                 <p>네, 밀리 회원이라면 누구나 첫 정기구독 신청 시 1회 제공됩니다. <br>
@@ -761,7 +791,7 @@
                         <li>
                             <div class="question">
                                 <p>어떤 기기에서 사용할 수 있나요?</p>
-                                <img src="images/main/down.png" alt="" class="down">
+                                <img src="images/main/down.png" alt="" class="down qu4">
                             </div>
                             <div class="answer">
                                 <p>아래 기기와 버전에서 밀리를 사용할 수 있습니다. <br><br>
@@ -777,7 +807,11 @@
          </div>
          <!--//page_panel8-->
 
-
+         <script>
+           $('.down').click(function(){
+            $(this).parent().siblings().slideToggle();
+           })
+         </script>
     </div>
     <!--//contents-->
 
@@ -821,7 +855,7 @@
     <!--//footer-->
 
         <button class="floating">
-            <b>앱 실행하기</b>
+            <b>첫 달 무료</b>로 독서 시작하기
         </button>
    
 </body>
