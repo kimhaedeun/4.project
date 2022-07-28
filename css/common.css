@@ -164,3 +164,16 @@ footer .copyright {
   color: #dfdfdf !important;
   transition: all 0.9s ease;
 }
+
+.tap_on {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgb(245, 245, 245);
+}
+
+.text_wrap {
+  transform: translateY(100px);
+  transition: all 2s ease;
+  opacity: 0;
+}

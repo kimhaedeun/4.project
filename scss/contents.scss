@@ -436,22 +436,21 @@
    .reading-wrap{
     
         // border: 1px solid gold;
-        padding: 40px 24px 0;
-        
-
-        .content-wrap{
+        padding: 0px 24px 0;
+         .content-wrap{
            
-           
+            position: relative;
             max-width: 834px;
             margin: 0 auto;
             
 
             .card-wrap{
-                
+                margin: 0 auto;
+                height: auto;
+
 
                 .card01{
                     left: -10%; top: 50%; 
-                    
                     position: absolute;
                     max-width: 172px;
 
@@ -805,35 +804,40 @@
             display: flex;
             flex-direction: row;
             padding: 0 200px;
+        }
 
-            .t_3{
-
-                margin-left: 10px;}
+           
 
             li{
                 cursor: pointer;
-                padding: 34px 16px 33px;
+                padding: 34px 16px 0px;
                 text-align: center;
                 position: relative;
                 flex: 1;
                 border: none;
                 text-align: center;
-                margin-top: 2%;
+                line-height: 400%;
+
+                .t_3{margin-left: 10px;}
+
+                   
 
                 img{
                     width: 24px;
                     height: 24px;
                     position: absolute;
-                    margin-top: -30px;
+                    margin-top: -10px;
                     margin-left: 20px;
+                    
                 }
-
+                
             }
+           
         }
     }
 
  
-        
+        .content-audio , .content-today{display: none;}
         .introduce{
             width: 1000px;
             margin: 0 auto;
@@ -897,7 +901,7 @@
                     );
                     }
 
-                    img , video{
+                    img , video, div{
                         
                         position: relative;
                         z-index: 1000;
@@ -919,9 +923,7 @@
                     }
             }
         }
-    
-    
-}
+
 #panel7_review{
     padding: 160px 0 0 0  ;
     background-color:#f7f7f7;
@@ -943,6 +945,10 @@
         .review-video{
             cursor: pointer;
             margin-top:-88px;
+            border: none;
+
+            iframe{width: 400px; height: 400px; border: none;}
+
         }
 
         .text-wrap{

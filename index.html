@@ -103,7 +103,7 @@
          <!--두 번재 page_panel2 무제한-->
          <div id="panel2_unlimited"  class="main_panel unlimited-page">
             <div class="contains panel2_wrap">
-                <div class="text-wrap text-wrap-delay">
+                <div class="text-wrap text-wrap2">
                     <h2 class="text1">
                         싹 다 무제한
                         <br>
@@ -197,7 +197,7 @@
           <!-- 세 번째 page_panel3-->
         <div id="panel3_categorize"  class="main_panel categorize-page">
             <div class="contains panel3_wrap">
-                <div class="text-wrap">
+                <div class="text-wrap text-wrap2">
                     <h2>
                         관심 분야에 있는 책도
                         <br>
@@ -285,207 +285,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "주식" },
-                headers: { Authorization:  "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
-            })
-                .done(function (msg) {
-
-                    var boxs = document.getElementsByClassName('slide_item');
-
-                    for (var i = 0; i < boxs.length; i++) {
-
-                        $(".slide-wrapper1 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-
-                        var str =msg.documents[i].title;
-                        var str2=str.substring(0,30);
-                        $(".slide-wrapper1 > .slide_item").eq(i).append("<h3>" + '<a href="">' + str2 + "</a>" + "</h3>");
-                        
-                        $(".slide-wrapper1 > .slide_item").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
-
-
-                        var str = msg.documents[i].contents;
-                        var str2 = str.substring(0, 60);
-
-                    }
-                });
-
-                $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "영어" },
-                headers: { Authorization:  "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
-            })
-                .done(function (msg) {
-
-                    var boxs = document.getElementsByClassName('slide_item');
-
-                    for (var i = 0; i < boxs.length; i++) {
-
-                        $(".slide-wrapper2 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-
-                        var str =msg.documents[i].title;
-                        var str2=str.substring(0,30);
-                        $(".slide-wrapper2 > .slide_item").eq(i).append("<h3>" + '<a href="">' + str2 + "</a>" + "</h3>");
-                        $(".slide-wrapper2 > .slide_item").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
-
-
-                        var str = msg.documents[i].contents;
-                        var str2 = str.substring(0, 60);
-
-                    }
-                });
-
-                $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "고전" },
-                headers: { Authorization:  "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
-            })
-                .done(function (msg) {
-
-                    var boxs = document.getElementsByClassName('slide_item');
-
-                    for (var i = 0; i < boxs.length; i++) {
-
-                        $(".slide-wrapper3 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-
-                         var str =msg.documents[i].title;
-                        var str2=str.substring(0,30);
-                        $(".slide-wrapper3 > .slide_item").eq(i).append("<h3>" + '<a href="">' + str2 + "</a>" + "</h3>");
-                        $(".slide-wrapper3 > .slide_item").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
-
-
-                        var str = msg.documents[i].contents;
-                        var str2 = str.substring(0, 60);
-
-                    }
-                });
-
-                $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "인테리어" },
-                headers: { Authorization:  "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
-            })
-                .done(function (msg) {
-
-                    var boxs = document.getElementsByClassName('slide_item');
-
-                    for (var i = 0; i < boxs.length; i++) {
-
-                        $(".slide-wrapper4 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-                        
-                        var str =msg.documents[i].title;
-                        var str2=str.substring(0,30);
-                        $(".slide-wrapper4 > .slide_item").eq(i).append("<h3>" + '<a href="">' + str2 + "</a>" + "</h3>");
-                        $(".slide-wrapper4 > .slide_item").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
-
-
-                        var str = msg.documents[i].contents;
-                        var str2 = str.substring(0, 60);
-
-                    }
-                });
-
-                $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "다이어트" },
-                headers: { Authorization:  "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5"}
-            })
-                .done(function (msg) {
-
-                    var boxs = document.getElementsByClassName('slide_item');
-
-                    for (var i = 0; i < boxs.length; i++) {
-
-                        $(".slide-wrapper5 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-                        var str =msg.documents[i].title;
-                        var str2=str.substring(0,30);
-                        $(".slide-wrapper5 > .slide_item").eq(i).append("<h3>" + '<a href="">' + str2 + "</a>" + "</h3>");
-                        $(".slide-wrapper5 > .slide_item").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
-
-
-                        var str = msg.documents[i].contents;
-                        var str2 = str.substring(0, 60);
-
-                    }
-                });
-        </script>
-
-        <script>
-            
-            $(window).on("scroll",function(){
-                var ms=$("body, html").offset().top -100;
-
-                if($(window).scrollTop()>=ms){
-                    $('.slide-wrapper1').show();
-                    $('.slide-wrapper2').hide();
-                    $('.slide-wrapper3').hide();
-                    $('.slide-wrapper4').hide();
-                    $('.slide-wrapper5').hide();
-                }
-            });
-            
-            $(function(){
-                $('.btn1>button').click(function(){
-                    $('.btn1>button').addClass("btn_active");
-                    $('.btn2>button , .btn3>button , .btn4>button , .btn5>button').removeClass("btn_active");
-                    $('.slide-wrapper1').show();
-                    $('.slide-wrapper2').hide();
-                    $('.slide-wrapper3').hide();
-                    $('.slide-wrapper4').hide();
-                    $('.slide-wrapper5').hide();
-
-                });
-                $('.btn2>button').click(function(){
-                    $('.btn2>button').addClass("btn_active");
-                    $('.btn1>button , .btn3>button , .btn4>button , .btn5>button').removeClass("btn_active");
-                    $('.slide-wrapper2').show();
-                    $('.slide-wrapper1').hide();
-                    $('.slide-wrapper3').hide();
-                    $('.slide-wrapper4').hide();
-                    $('.slide-wrapper5').hide();
-
-                });
-                $('.btn3>button').click(function(){
-                    $('.btn3>button').addClass("btn_active");
-                    $('.btn1>button , .btn2>button , .btn4>button , .btn5>button').removeClass("btn_active");
-                    $('.slide-wrapper3').show();
-                    $('.slide-wrapper1').hide();
-                    $('.slide-wrapper2').hide();
-                    $('.slide-wrapper4').hide();
-                    $('.slide-wrapper5').hide();
-
-                });
-                $('.btn4>button').click(function(){
-                    $('.btn4>button').addClass("btn_active");
-                    $('.btn1>button , .btn2>button , .btn3>button , .btn5>button').removeClass("btn_active");
-                    $('.slide-wrapper4').show();
-                    $('.slide-wrapper1').hide();
-                    $('.slide-wrapper2').hide();
-                    $('.slide-wrapper3').hide();
-                    $('.slide-wrapper5').hide();
-
-                });
-                $('.btn5>button').click(function(){
-                    $('.btn5>button').addClass("btn_active");
-                    $('.btn1>button , .btn2>button , .btn3>button , .btn4>button').removeClass("btn_active");
-                    $('.slide-wrapper5').show();
-                    $('.slide-wrapper1').hide();
-                    $('.slide-wrapper2').hide();
-                    $('.slide-wrapper3').hide();
-                    $('.slide-wrapper4').hide();
-
-                });
-            })
-        </script>
-        
         <!--//page_panel3-->
 
          <!-- 네 번째 page_panel4-->
@@ -645,8 +444,8 @@
                     </ul>
                 </div>
                 <div class="content-wrap">
-                    <div class="introduce">
-                        <div class="text-wrap audiobook">
+                    <div class="introduce content-audio">
+                        <div class="text-wrap">
                             <img src="images/main/audio-img.png" alt="audio" class="audio">
                             <h2>오디오북</h2>
                             <p class="p1">
@@ -658,71 +457,98 @@
                                 <b>하루의 시작과 마무리를 오디오북과 함께</b> <br>
                                 지하철에서도, 잠들기 전에도 독서하세요.
                             </p>
-
                             <div class="tap_btn">
                                 <button class="t_btn1">1</button>
                                 <button class="t_btn2">2</button>
                                 <button class="t_btn3">3</button>
                                 <button class="t_btn4">4</button>
-                            
                             </div>
                         </div>
-                            <div class="phone-wrap">
-                                <div class="phone-shape">
-                                    <img src="images/main/phone.png" alt="밀리오디오북">
-                                </div>
-                                <div class="phone-contents">
-                                    <div class="phone_slide">
-                                        
-                                            <img src="images/main/ph_slide1.png" alt="">
+                        <div class="phone-wrap">
+                            <div class="phone-shape">
+                                <img src="images/main/phone.png" alt="밀리오디오북">
+                            </div>
+                            <div class="phone-contents">
+                                <div class="phone_slide">
 
-                                           
-                                            <video src="images/main/viewer_system2.mp4" class="v_img" style="width:330px"; autoplay="autoplay" preload="auto" muted="muted" loop="loop" ></video>
-                                        
-                                        
-                                            <img src="images/main/ph_slide3.png" alt="">
-
-                                       
-                                       
-                                            <img src="images/main/ph_slide4.png" alt="">
-                                        
-                                    </div>
+                                    <div><img src="images/main/ph_slide1.png" alt=""></div>
+                                    <div><video src="images/main/viewer_system2.mp4" class="v_img" style="width:330px"; autoplay="autoplay" preload="auto" muted="muted" loop="loop" ></video></div>
+                                    <div><img src="images/main/ph_slide3.png" alt=""></div>
+                                    <div><img src="images/main/ph_slide4.png" alt=""></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>    
+                    <div class="introduce content-viwer" style="display: none;">
+                        <div class="text-wrap">
+                            <img src="images/main/viwer-img.png" alt="audio" class="audio">
+                            <h2>밀리뷰어</h2>
+                            <p class="p1">
+                                독서를 위한 가장
+                                <br>
+                                완벽한 도구
+                            </p>
+                            <p class="p2">
+                                <b>시선추적기능</b> <br>
+                                눈동자로 페이지를 넘길 수 있어요
+                            </p>
+                            <div class="tap_btn">
+                                <button class="t_btn1">1</button>
+                                <button class="t_btn2">2</button>
+                                <button class="t_btn3">3</button>
+                                <button class="t_btn4">4</button>
+                            </div>
+                        </div>
+                        <div class="phone-wrap">
+                            <div class="phone-shape">
+                                <img src="images/main/phone.png" alt="밀리오디오북">
+                            </div>
+                            <div class="phone-contents">
+                                <div class="phone_slide">
+                                    <video src="images/main/viwer_1.mp4" class="v_img" style="width:330px"; autoplay="autoplay" preload="auto" muted="muted" loop="loop" ></video>
+                                        <video src="images/main/viewer_system2.mp4" class="v_img" style="width:330px"; autoplay="autoplay" preload="auto" muted="muted" loop="loop" ></video>
+                                        <video src="images/main/viwer_3.mp4" class="v_img" style="width:330px"; autoplay="autoplay" preload="auto" muted="muted" loop="loop" ></video>
+                                        <video src="images/main/viwer4.mp4" class="v_img" style="width:330px"; autoplay="autoplay" preload="auto" muted="muted" loop="loop" ></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="introduce content-today" style="display: none;">
+                        <div class="text-wrap">
+                            <img src="images/main/today-img.png" alt="audio" class="audio">
+                            <h2>투데이</h2>
+                            <p class="p1">
+                                쓱-훑어만 봐도
+                                <br>
+                                독서 트렌드를 한 눈에
+                            </p>
+                            <p class="p2">
+                                <b>당신을 위한 추천</b> <br>
+                                키워드로 한 눈에 정리한 추천 도서
+                            </p>
+                            <div class="tap_btn">
+                                <button class="t_btn1">1</button>
+                                <button class="t_btn2">2</button>
+                                <button class="t_btn3">3</button>
+                            </div>
+                        </div>
+                        <div class="phone-wrap">
+                            <div class="phone-shape">
+                                <img src="images/main/phone.png" alt="밀리오디오북">
+                            </div>
+                            <div class="phone-contents">
+                                <div class="phone_slide">
+                                        <img src="images/main/today_1.PNG" alt="">
+                                        <img src="images/main/today_2.PNG" alt="">
+                                        <img src="images/main/today_3.PNG" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>    
                 </div>     
          </div>
          <!--//page_panel6-->
 
-         <script>
-            $(function(){
-                $(".tap_btn > button:nth-of-type(1)").click(function(){
-                    $(".phone-contents>.phone_slide>img").animate({top:0},"fast");
-                    $(".p2").html("<b>하루의 시작과 마무리를 오디오북과 함께</b>" + "<br/>" + "지하철에서도, 잠들기 전에도 독서하세요");
-                    $(".tap_btn>button").removeClass("btn_phone");
-                    $(".t_btn1").addClass("btn_phone");
-                });
-                $(".tap_btn > button:nth-of-type(2)").click(function(){
-                    $(".phone-contents>.phone_slide>.v_img").animate({top:-740},"fast");
-                    $(".p2").html("귀로 듣다가 눈으로도 같이 보면" + "<br/>" + "더 내용이 잘 이해돼요");
-                    $(".tap_btn>button").removeClass("btn_phone");
-                    $(".t_btn2").addClass("btn_phone");
-                });
-                $(".tap_btn > button:nth-of-type(3)").click(function(){
-                    $(".phone-contents>.phone_slide>img").animate({top:-1480},"fast");
-                    $(".p2").html("30분만에 책 요약" + "<br/>" + "핵심만 쏙 골라 읽어주는 오디오북");
-                    $(".tap_btn>button").removeClass("btn_phone");
-                    $(".t_btn3").addClass("btn_phone");
-                });
-                $(".tap_btn > button:nth-of-type(4)").click(function(){
-                    $(".phone-contents>.phone_slide>img").animate({top:-2160},"fast");
-                    $(".p2").html("이제훈부터 옥주현까지" + "<br/>" + "셀럽이 읽어주는 오디오북");
-                    $(".tap_btn>button").removeClass("btn_phone");
-                    $(".t_btn4").addClass("btn_phone");
-                });
-
-            });
-         </script>
 
           <!-- 일곱 번째 page_panel7-->
         <div id="panel7_review"  class="main_panel">
@@ -730,7 +556,10 @@
                 <img src="images/main/review-bg.png" alt="" class="review-bg">
                 <div class="contains section-wrap">
                     <div class="review-video">
-                        <img src="images/main/youtube_poster.png" alt="">
+                        <iframe width="473" height="841" src="https://www.youtube.com/embed/m_rkxdWkgFI"
+                        title="독서와 친해진 방법 알려드림! 배우 하영원님 솔직후기 - 클릭 한 번이면 책을 읽을 수 있으니까! [ 당신의 일상을 1밀리+ ]" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     </div>
                     <div class="text-wrap">
                         <h2>내돈내산
@@ -806,12 +635,6 @@
             </div>
          </div>
          <!--//page_panel8-->
-
-         <script>
-           $('.down').click(function(){
-            $(this).parent().siblings().slideToggle();
-           })
-         </script>
     </div>
     <!--//contents-->
 
@@ -859,17 +682,5 @@
         </button>
    
 </body>
-<script>
-    $(function(){
-        $('.text_wrap').css("transform","translateY(0px)").css("opacity","1");
 
-        $(window).scroll(function(){
-            var ws=$(this).scrollTop();
-
-            if(ws>700){
-                $('.text_wrap').css("transform","translateY(0px)").css("opacity","1");
-            }
-        });
-    });
-</script>
 </html>

@@ -366,11 +366,16 @@
   font-family: "Cafe24Ssurround";
 }
 #panel4_reading .reading-wrap {
-  padding: 40px 24px 0;
+  padding: 0px 24px 0;
 }
 #panel4_reading .reading-wrap .content-wrap {
+  position: relative;
   max-width: 834px;
   margin: 0 auto;
+}
+#panel4_reading .reading-wrap .content-wrap .card-wrap {
+  margin: 0 auto;
+  height: auto;
 }
 #panel4_reading .reading-wrap .content-wrap .card-wrap .card01 {
   left: -10%;
@@ -665,27 +670,32 @@
   flex-direction: row;
   padding: 0 200px;
 }
-#panel6_content .tap-wrap ul .t_3 {
-  margin-left: 10px;
-}
-#panel6_content .tap-wrap ul li {
+#panel6_content .tap-wrap li {
   cursor: pointer;
-  padding: 34px 16px 33px;
+  padding: 34px 16px 0px;
   text-align: center;
   position: relative;
   flex: 1;
   border: none;
   text-align: center;
-  margin-top: 2%;
+  line-height: 400%;
 }
-#panel6_content .tap-wrap ul li img {
+#panel6_content .tap-wrap li .t_3 {
+  margin-left: 10px;
+}
+#panel6_content .tap-wrap li img {
   width: 24px;
   height: 24px;
   position: absolute;
-  margin-top: -30px;
+  margin-top: -10px;
   margin-left: 20px;
 }
-#panel6_content .introduce {
+
+.content-audio, .content-today {
+  display: none;
+}
+
+.introduce {
   width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -693,32 +703,32 @@
   padding: 74px 90px;
   font-family: "Pretendard";
 }
-#panel6_content .introduce .text-wrap {
+.introduce .text-wrap {
   flex: 1;
   margin-bottom: 30%;
   position: relative;
   min-width: 171px;
 }
-#panel6_content .introduce .text-wrap .audio {
+.introduce .text-wrap .audio {
   width: 44px;
   height: 44px;
 }
-#panel6_content .introduce .text-wrap h2 {
+.introduce .text-wrap h2 {
   font-size: 49px;
   line-height: 20%;
   font-weight: bold;
   letter-spacing: -0.6px;
 }
-#panel6_content .introduce .text-wrap p {
+.introduce .text-wrap p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #777;
 }
-#panel6_content .introduce .text-wrap .p2 {
+.introduce .text-wrap .p2 {
   padding: 200px 0px 0px 0px;
 }
-#panel6_content .introduce .text-wrap .tap_btn button {
+.introduce .text-wrap .tap_btn button {
   width: 50px;
   height: 25px;
   margin: 0 3px;
@@ -726,22 +736,22 @@
   background: rgba(230, 230, 230, 0.1);
   border: 1px solid rgb(82, 82, 82);
 }
-#panel6_content .introduce .phone-wrap {
+.introduce .phone-wrap {
   box-sizing: border-box;
 }
-#panel6_content .introduce .phone-wrap .phone-shape {
+.introduce .phone-wrap .phone-shape {
   margin-top: -240px;
   position: relative;
   z-index: 10;
   max-width: 330px;
   filter: drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
 }
-#panel6_content .introduce .phone-wrap img, #panel6_content .introduce .phone-wrap video {
+.introduce .phone-wrap img, .introduce .phone-wrap video, .introduce .phone-wrap div {
   position: relative;
   z-index: 1000;
   width: 330px;
 }
-#panel6_content .introduce .phone-wrap .phone-contents {
+.introduce .phone-wrap .phone-contents {
   position: absolute;
   width: 330px;
   height: 670px;
@@ -770,6 +780,12 @@
 #panel7_review .section-wrap .review-video {
   cursor: pointer;
   margin-top: -88px;
+  border: none;
+}
+#panel7_review .section-wrap .review-video iframe {
+  width: 400px;
+  height: 400px;
+  border: none;
 }
 #panel7_review .section-wrap .text-wrap {
   padding-top: 80px;
