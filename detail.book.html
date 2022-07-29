@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밀리의 서재｜도서 상세 페이지</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/detail.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header class="header">
+        <h1>
+            <a href="index.html">
+                <img src="images/main/full-logo.png" alt="로고">
+            </a>
+        </h1>
+
+        <!--최상위 네비게이션 (메뉴)-->
+        <div class="gnb">
+            <ul>
+                <li class="gnb1">
+                    <a href="#"><span>기업문의</span></a>
+                </li>
+                <li class="gnb2">
+                    <a href="#">계정관리</a>
+                </li>
+            </ul>
+            <button class="login">로그인</button>
+        </div>
+    </header>
+    <!--//header-->    
+
+    <!--section-->
+
+    <section>
+        <div class="page1 contains">
+            <div class="box1">
+                <div class="b_img">
+                    <img src="images/detail/b_img.jpg" alt="">
+                </div>
+                <div class="b_tit">
+                    <div class="tit"></div>
+                    <div class="aut"></div>
+                </div>
+            </div>
+            <div class="b_box">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tmpBox"></div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="contains">
+            <div class="footer-head">
+                <h1>(주) 밀리의 서재</h1>
+                <ul class="sns">
+                    <li class="youtube">
+                        <img src="images/main/sns-youtube.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/main/sns-instagram.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/main/sns-kakaotalk.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/main/sns-naver.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/main/sns-facebook.png" alt="">
+                    </li>
+                 </ul>
+            </div>
+            <button class="by-button">사업자 정보 펼쳐보기<img src="images/main/f_down.png" alt=""></button>
+            <ul class="services">
+                <li><a href="">이용약관<img src="images/main/small-arr.png" alt=""></a>  </li>
+                <li><a href=""><b>개인정보처리방침</b><img src="images/main/small-arr.png" alt=""></a></li>
+                <li><a href="">청소년보호정책<img src="images/main/small-arr.png" alt=""></a></li>
+                <li><a href="">고객센터<img src="images/main/small-arr.png" alt=""></a></li>
+                <li><a href="">B2B문의<img src="images/main/small-arr.png" alt=""></a></li>
+                <li><a href="">콘텐츠 제휴문의<img src="images/main/small-arr.png" alt=""></a></li>
+                <li><a href="">뷰어 다운로드<img src="images/main/small-arr.png" alt=""></a></li>
+                <li><a href="">회사 소개<img src="images/main/small-arr.png" alt=""></a></li>
+            </ul>
+            <p class="copyright">copyright ⓒ 2022 밀리의 서재 ALL Rights Reserved.</p>
+        </div>
+    </footer>
+        <!--//footer-->
+
+        <script>
+            $.ajax({
+              method: "GET",
+              url: "https://dapi.kakao.com/v3/search/book?target=title",
+              data: { query: "작별인사" },
+              headers: { Authorization: "KakaoAK c8ffc3ab6fd3e90abbd76c604e685526" }
+            })
+              .done(function (msg) {
+                console.log(msg.documents[1].title);
+                console.log(msg.documents[1].thumbnail);
+      
+                // sub1
+                $(".tit").append("<h3>" + msg.documents[0].title + "</h3>");
+                $(".aut").append("<h6>" + msg.documents[0].authors[0] + "</h6>");            
+              
+              });
+      
+            //메모장으로 sub 텍스트 가져오기, 서버에 올려야 보임
+            $(function () {
+              $.get("./sub_txt/txt1.txt", function (data) {
+                $("#tmpBox").html(data);
+              })
+      
+            });
+          </script>
+</body>
+</html>
