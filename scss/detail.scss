@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+*{font-family: 'Pretendard';}
 
 .page1{
     border: 1px solid rgb(170, 170, 170);
@@ -46,10 +47,50 @@
     }
 
     .b_box{ 
-        margin: 0 300px;
+        margin: 0 350px;
         margin-top: -100px;
         width: 60%;
         height: 15%;
-        border: 2px solid darkblue;
+        
+        background-color: rgb(250, 248, 248);
+        box-shadow: 0px 4px 15px rgb(0 0 0 /8%),4px 8px 2px rgb(0 0 0 /2%);
+
+        ul{
+            display: flex;
+            justify-content:space-evenly;
+
+            li{
+                    border-right: 1px solid rgb(192, 192, 192);
+                    padding: 5px 80px 5px 60px;
+                    cursor: pointer;
+                
+                    img{
+                    margin-left: 20px;
+                    width: 35px;
+                    height: 20px;
+                }
+
+                .li_img2, .li_img3{
+                    margin-right: 20px;
+                   
+                }
+
+                h6{
+                    text-align: center;
+                    margin-top: 5px;
+                    line-height: 5px;
+                    color: rgb(161, 161, 161);
+                    font-size: 10px;
+                }
+
+                p{
+                    margin-top: -10px;
+                    line-height: 0;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
