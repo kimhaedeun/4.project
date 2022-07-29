@@ -5,6 +5,7 @@
 }
 .page1 .box1 {
   display: flex;
+  font-family: "Pretendard";
 }
 .page1 .box1 .b_img {
   margin-top: 80px;
@@ -13,17 +14,28 @@
   width: -moz-max-content;
   width: max-content;
   height: auto;
-  border: 2px solid rgb(59, 59, 59);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16), 4px 8px 28px rgba(0, 0, 0, 0.08);
 }
 .page1 .box1 .b_img img {
   width: 100%;
   height: auto;
 }
 .page1 .box1 .b_tit {
+  padding: 0 30px;
   margin-top: 80px;
   width: 80%;
   height: 200px;
-  border: 2px solid rgb(59, 59, 59);
+}
+.page1 .box1 .b_tit .tit {
+  font-weight: bold;
+  line-height: 10%;
+}
+.page1 .box1 .b_tit .tit h3 {
+  letter-spacing: 0.6px;
+}
+.page1 .box1 .b_tit .aut {
+  line-height: 0.1%;
+  color: rgb(161, 161, 161);
 }
 .page1 .b_box {
   margin: 0 300px;

@@ -8,24 +8,38 @@
     
     .box1{
         display: flex;
+        font-family: 'Pretendard';
 
         .b_img{
             margin-top: 80px;
             margin-left: 30px;
             width: max-content;
             height: auto;
-            border: 2px solid rgb(59, 59, 59);
-
+            box-shadow: 0 4px 12px rgb(0 0 0 /16%),4px 8px 28px rgb(0 0 0 /8%);
+            
             img{
                 width:100%;
                 height: auto;
             }
         }
         .b_tit{
+            padding: 0 30px;
             margin-top: 80px;
             width: 80%;
             height: 200px;
-            border: 2px solid rgb(59, 59, 59);
+            
+            .tit{
+                font-weight: bold;
+                line-height: 10%;
+
+                h3{
+                    letter-spacing: 0.6px;
+                }
+            }
+            .aut{
+                line-height: 0.1%;
+                color: rgb(161, 161, 161);
+            }
 
             
         }
