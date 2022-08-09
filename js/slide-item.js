@@ -376,3 +376,24 @@ $.ajax({
   
         });
 
+
+        $(function(){
+          $('.page6 li:nth-of-type(1)').click(function(){
+            $(this).addClass("tap_on");
+            $('.box7').show();
+            $('.box8').hide();
+            $('.box9').hide();
+          });
+          $('.page6 li:nth-of-type(2)').click(function(){
+            $(this).addClass("tap_on");
+            $('.box8').show();
+            $('.box7').hide();
+            $('.box9').hide();
+          });
+          $('.page6 li:nth-of-type(3)').click(function(){
+            $(this).addClass("tap_on");
+            $('.box9').show();
+            $('.box7').hide();
+            $('.box8').hide();
+          });
+        });
