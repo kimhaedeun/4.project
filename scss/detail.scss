@@ -5,7 +5,7 @@
 .page1{
     border: 1px solid rgb(170, 170, 170);
     width: 1100px;
-    height: 500px;
+    height: auto;
     
     .box1{
         display: flex;
@@ -72,7 +72,6 @@
 
                 .li_img2, .li_img3{
                     margin-right: 20px;
-                   
                 }
 
                 h6{
@@ -90,6 +89,51 @@
                     font-size: 12px;
                     font-weight: bold;
                 }
+            }
+        }
+    }
+
+    .page2{
+        height: auto;
+        padding:50px 20px 0 28px;
+       
+        .box2{
+
+            display: flex;
+            box-shadow: 0px 4px 15px rgb(0 0 0 /8%),4px 8px 2px rgb(0 0 0 /2%);
+            
+
+        img{
+            width: 30px;
+            height: 25px;
+            padding: 10px 0 0 20px;
+            
+            }
+
+            p{
+                text-align: center;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 0 10px 0 10px;
+            }
+        }
+    }
+
+    .page3{
+        padding:0px 20px 0 28px;
+        .box3{
+            box-shadow: 0px 4px 15px rgb(0 0 0 /8%),4px 8px 2px rgb(0 0 0 /2%);
+
+            h4{
+                font-size: 15px;
+                font-weight: bold;
+                padding: 0 10px 0 10px;
+            }
+            
+            p{
+                margin: 0 8px;
+                color: rgb(161, 161, 161);
+                font-size: 13px;
             }
         }
     }
