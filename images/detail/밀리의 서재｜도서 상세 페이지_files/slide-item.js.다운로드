@@ -329,13 +329,9 @@ $(".t_btn3").addClass("btn_phone");
 //qn
 
 
-
-
 $('.down').click(function(){
  $(this).parent().siblings().slideToggle();
 });
-
-//detail
 
 $.ajax({
     method: "GET",
@@ -344,35 +340,20 @@ $.ajax({
     headers: { Authorization:  "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5" }
   })
     .done(function (msg) {
+
       var boxs = document.getElementsByClassName('box4');
+
       for (var i = 0; i < boxs.length; i++) {
+
+
         var str = msg.documents[i].contents;
         var str2 = str.substring(0,1200);
+
         $(".box4>h5").eq(i).append("<p>" + '<a href="#">' + str2 + "</a>" + "</p>");
         $(".box4>h5").eq(i).append('<a href="#" class="btn">' + "더보기" + "</a>");
+
       }
+
     });
 
-    $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "작별인사" },
-        headers: { Authorization: "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5" }
-      })
-        .done(function (msg) {
-  
-          var boxs = document.getElementsByClassName('box5');
-  
-          for (var i = 0; i < boxs.length; i++) {
-  
-            $(".box5>ul").eq(i).append("<h6>"+"도서 저자<br><br>"+ msg.documents[i].authors +  "</h6>");
-            $(".box5>ul").eq(i).append("<h6>"+"도서 출판사<br><br>"+ msg.documents[i].publisher + "</h6>");
-            $(".box5>ul").eq(i).append("<h6>"+"도서 정가<br><br>"+ msg.documents[i].price + " 원"+"</h6>");
-
-            $(".box5>ul").eq(i).append("<h6>"+"도서 판매가<br><br>"+ msg.documents[i].sale_price+ " 원"+ "</h6>");
-            $(".box5>ul").eq(i).append("<h6>"+"<br>"+ msg.documents[i].status+ "</h6>");
-  
-          }
-  
-        });
 
