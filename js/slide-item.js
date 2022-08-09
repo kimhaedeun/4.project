@@ -377,21 +377,27 @@ $.ajax({
         });
 
 
+
+
+
         $(function(){
           $('.page6 li:nth-of-type(1)').click(function(){
-            $(this).addClass("tap_on");
+            $('.t_btn>.t1').addClass("on");
+            $('.t_btn>.t2 ,.t_btn>.t3').removeClass("on");
             $('.box7').show();
             $('.box8').hide();
             $('.box9').hide();
           });
           $('.page6 li:nth-of-type(2)').click(function(){
-            $(this).addClass("tap_on");
+            $('.t_btn>.t2').addClass("on");
+            $('.t_btn>.t1 ,.t_btn>.t3').removeClass("on");
             $('.box8').show();
             $('.box7').hide();
             $('.box9').hide();
           });
           $('.page6 li:nth-of-type(3)').click(function(){
-            $(this).addClass("tap_on");
+            $('.t_btn>.t3').addClass("on");
+            $('.t_btn>.t1 ,.t_btn>.t2').removeClass("on");
             $('.box9').show();
             $('.box7').hide();
             $('.box8').hide();
