@@ -403,3 +403,25 @@ $.ajax({
             $('.box8').hide();
           });
         });
+
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "김영하" },
+            headers: { Authorization: "KakaoAK 3e2d6e6c457a4ca589f788c6ad891ab5" }
+          })
+            .done(function (msg) {
+      
+              var boxs = document.getElementsByClassName('box');
+      
+              for (var i = 0; i < boxs.length; i++) {
+      
+                $(".box").eq(i).append('<a href="#" class="ct">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                $(".box").eq(i).append("<h3>" + '<a href="#">' + msg.documents[i].title + "</a>" + "</h3>");
+                $(".box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+      
+              }
+      
+            });
+      

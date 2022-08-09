@@ -200,7 +200,47 @@
   line-height: 18px;
   display: none;
 }
-.page1 .on {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3), 4px 8px 2px rgba(0, 0, 0, 0.02);
+.page1 .page7 {
+  height: 500px;
+  padding: 0px 20px 0 28px;
+}
+.page1 .page7 .box10 h4 {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+}
+.page1 .page7 .box10 .booklist {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.page1 .page7 .box10 .booklist .box {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08), 4px 8px 2px rgba(0, 0, 0, 0.02);
+  width: 360px;
+  height: 300px;
+  margin: 10px;
+  padding: 20px;
+}
+.page1 .page7 .box10 .booklist .box img {
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.18), 4px 8px 2px rgba(0, 0, 0, 0.08);
+  height: auto;
+}
+.page1 .page7 .box10 .booklist .box img:hover {
+  transform: translateY(-8px) rotate(-8deg) scale(1.07);
+}
+.page1 .page7 .box10 .booklist .box h3 {
+  color: rgb(161, 161, 161);
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555;
+  font-family: "Pretendard";
+  letter-spacing: -0.6px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  width: 100%;
+  height: 30px;
 }
