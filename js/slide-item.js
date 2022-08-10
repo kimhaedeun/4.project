@@ -221,6 +221,7 @@ $(window).on("scroll",function(){
 
     if($(window).scrollTop()>=ms){
     $(".t_btn1").addClass("btn_phone");
+    $('.audio_book').addClass("tap_on");
     }
 });
            
