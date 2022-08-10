@@ -26,7 +26,7 @@ $.ajax({
 
         for (var i = 0; i < boxs.length; i++) {
 
-            $(".slide-wrapper1 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+            $(".slide-wrapper1 > .slide_item").eq(i).append('<a href="detail.book.html">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
 
             var str =msg.documents[i].title;
             var str2=str.substring(0,30);
@@ -53,7 +53,7 @@ $.ajax({
 
         for (var i = 0; i < boxs.length; i++) {
 
-            $(".slide-wrapper2 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+            $(".slide-wrapper2 > .slide_item").eq(i).append('<a href="detail.book.html">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
 
             var str =msg.documents[i].title;
             var str2=str.substring(0,30);
@@ -79,7 +79,7 @@ $.ajax({
 
         for (var i = 0; i < boxs.length; i++) {
 
-            $(".slide-wrapper3 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+            $(".slide-wrapper3 > .slide_item").eq(i).append('<a href="detail.book.html">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
 
              var str =msg.documents[i].title;
             var str2=str.substring(0,30);
@@ -105,7 +105,7 @@ $.ajax({
 
         for (var i = 0; i < boxs.length; i++) {
 
-            $(".slide-wrapper4 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+            $(".slide-wrapper4 > .slide_item").eq(i).append('<a href="detail.book.html">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
             
             var str =msg.documents[i].title;
             var str2=str.substring(0,30);
@@ -131,7 +131,7 @@ $.ajax({
 
         for (var i = 0; i < boxs.length; i++) {
 
-            $(".slide-wrapper5 > .slide_item").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+            $(".slide-wrapper5 > .slide_item").eq(i).append('<a href="detail.book.html">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
             var str =msg.documents[i].title;
             var str2=str.substring(0,30);
             $(".slide-wrapper5 > .slide_item").eq(i).append("<h3>" + '<a href="">' + str2 + "</a>" + "</h3>");
@@ -348,7 +348,7 @@ $.ajax({
       for (var i = 0; i < boxs.length; i++) {
         var str = msg.documents[i].contents;
         var str2 = str.substring(0,1200);
-        $(".box4>h5").eq(i).append("<p>" + '<a href="#">' + str2 + "</a>" + "</p>");
+        $(".box4>h5").eq(i).append("<p>" + '<a href="detail.book.html">' + str2 + "</a>" + "</p>");
         $(".box4>h5").eq(i).append('<a href="#" class="btn">' + "더보기" + "</a>");
       }
     });
@@ -417,8 +417,8 @@ $.ajax({
       
               for (var i = 0; i < boxs.length; i++) {
       
-                $(".box").eq(i).append('<a href="#" class="ct">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-                $(".box").eq(i).append("<h3>" + '<a href="#">' + msg.documents[i].title + "</a>" + "</h3>");
+                $(".box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                $(".box").eq(i).append("<h3>" + '<a href="detail.book.html">' + msg.documents[i].title + "</a>" + "</h3>");
                 $(".box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
       
               }
