@@ -708,6 +708,7 @@
   margin-bottom: 30%;
   position: relative;
   min-width: 171px;
+  overflow: hidden;
 }
 .introduce .text-wrap .audio {
   width: 44px;

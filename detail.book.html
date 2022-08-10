@@ -192,37 +192,5 @@
     </footer>
         <!--//footer-->
 
-        <script>
-            $.ajax({
-              method: "GET",
-              url: "https://dapi.kakao.com/v3/search/book?target=title",
-              data: { query: "작별인사" },
-              headers: { Authorization: "KakaoAK c8ffc3ab6fd3e90abbd76c604e685526" }
-            })
-              .done(function (msg) {
-                console.log(msg.documents[1].title);
-                console.log(msg.documents[1].thumbnail);
-      
-                // sub1
-                $(".tit").append("<h3>" + msg.documents[0].title + "</h3>");
-                $(".aut").append("<h6>" + msg.documents[0].authors[0] + "</h6>");            
-              
-              });
-      
-            //메모장으로 sub 텍스트 가져오기, 서버에 올려야 보임
-            $(function () {
-              $.get("./txt/box7.txt", function (data) {
-                $(".box7").html(data);
-              })
-      
-            });
-
-            $(function () {
-              $.get("./txt/box9.txt", function (data) {
-                $(".box9").html(data);
-              })
-      
-            });
-          </script>
 </body>
 </html>
