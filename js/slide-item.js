@@ -232,7 +232,7 @@ $(function(){
         $('.viewer').removeClass("tap_on");
         $('.today').removeClass("tap_on");
         $('.content-audio').css("display","flex");
-        $('.content-viwer , .content-today').css("display","contents");
+        $('.content-viwer , .content-today').css("display","none");
     });
     $('.viewer').click(function(){
         $(this).addClass("tap_on");
