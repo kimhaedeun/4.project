@@ -152,6 +152,7 @@ $(window).on("scroll",function(){
     var ms=$("body, html").offset().top -100;
 
     if($(window).scrollTop()>=ms){
+        $('.btn1>button').addClass("btn_active");
         $('.slide-wrapper1').show();
         $('.slide-wrapper2').hide();
         $('.slide-wrapper3').hide();
@@ -213,8 +214,15 @@ $(function(){
     });
 })
 
-//
+//panel6
 
+$(window).on("scroll",function(){
+    var ms=$("body, html").offset().top -100;
+
+    if($(window).scrollTop()>=ms){
+    $(".t_btn1").addClass("btn_phone");
+    }
+});
            
 
 $(function(){
@@ -328,12 +336,13 @@ $(".t_btn3").addClass("btn_phone");
 
 //qn
 
+$(document).ready(function () {
+    $(".down").click(function () {
+      $(this).parent().siblings().slideToggle("slow");
+    });
+  });
 
 
-
-$('.down').click(function(){
- $(this).parent().siblings().slideToggle();
-});
 
 //detail
 
